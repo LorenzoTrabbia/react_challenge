@@ -1,38 +1,57 @@
-.App {
-  text-align: center;
+.button-add,
+.button-delete,
+.button-enable,
+.button-disable,
+select {
+  border-radius: 6px;
+  border-width: 0;
+  color: #fff;
+  cursor: pointer;
+  margin: 12px;
+  padding: 0 15px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+select {
+  background-color: rgb(201, 201, 201);
+  color: #000;
+  height: 25px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input {
+  border-radius: 6px;
+  height: 25px;
+  padding: 0 15px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.button-add {
+  background-color: #405cf5;
+  height: 44px;
 }
 
-.App-link {
-  color: #61dafb;
+.button-add:focus {
+  box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.button-delete {
+  background-color: #f5405c;
+  height: 25px;
+  margin: 12px 5px;
+}
+
+.button-enable {
+  background-color: #49c434;
+  height: 25px;
+  margin: 12px 5px;
+
+}
+
+.button-disable {
+  background-color: #f57940;
+  height: 25px;
+  margin: 12px 5px;
+}
+
+.result-container {
+  margin: 0 27px;
+  font-size: 1.2em;
 }

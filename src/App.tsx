@@ -55,7 +55,9 @@ function App() {
     return (
         <>
             <div>
-                <button onClick={handleAddRow}>Add row</button>
+                <button onClick={handleAddRow} className="button-add">
+                    Add row
+                </button>
             </div>
             <ul>
                 {rows.map((row, index) => (
@@ -71,21 +73,31 @@ function App() {
                         </select>
                         <input
                             type="number"
-                            defaultValue={row.value}
+                            defaultValue={row.value === 0 ? "" : row.value}
                             onChange={(e: any) =>
                                 handleValueChange(index, e.target.value)
                             }
                         />
-                        <button onClick={() => handleRemoveRow(index)}>
+                        <button
+                            onClick={() => handleRemoveRow(index)}
+                            className="button-delete"
+                        >
                             Delete
                         </button>
-                        <button onClick={() => handleDisabledChange(index)}>
+                        <button
+                            onClick={() => handleDisabledChange(index)}
+                            className={
+                                row.disabled
+                                    ? "button-enable"
+                                    : "button-disable"
+                            }
+                        >
                             {row.disabled ? "Enable" : "Disable"}
                         </button>
                     </li>
                 ))}
             </ul>
-            <div>Result: {result}</div>
+            <div className="result-container">Result: {result}</div>
         </>
     );
 }
