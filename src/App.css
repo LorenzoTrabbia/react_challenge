@@ -11,13 +11,17 @@ select {
   padding: 0 15px;
 }
 
-select {
+.h1 {
+  margin-left: 18px;
+}
+
+.select {
   background-color: rgb(201, 201, 201);
   color: #000;
   height: 25px;
 }
 
-input {
+.input {
   border-radius: 6px;
   height: 25px;
   padding: 0 15px;
